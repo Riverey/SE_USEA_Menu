@@ -1,0 +1,1111 @@
+void Main()   
+{   
+WriteText(@" 
+@Variables{ 
+	Heading = ""SHIP CONTROLS 
+	////////////////////////// 
+	"" 
+	L1 = ""GEAR & MAGNETS"" 
+	L11 = ""Toggle gear"" 
+	L12 = ""Switch gear lock"" 
+	L13 = ""Toggle magnets"" 
+	L14 = ""Unlock magnets"" 
+	L2 = ""WEAPONS"" 
+	L21 = ""Toggle weapon systems"" 
+	L22 = ""Toggle turret"" 
+	L23 = ""Toggle turret neutral targets"" 
+	L3 = ""CONNECTORS"" 
+	L31 = ""Toggle connector A (top)"" 
+	L32 = ""Switch lock of connector A (top)"" 
+	L33 = ""Toggle connector B (bottom)"" 
+	L34 = ""Switch lock of connector B (bottom)"" 
+	L4 = ""THRUSTERS"" 
+	L41 = ""Toggle atmospheric thrusters"" 
+	L42 = ""Toggle hydrogen thrusters"" 
+	L43 = ""Toggle ion thrusters"" 
+	L44 = ""Toggle afterburners"" 
+	L5 = ""JUMDRIVES & JUMGATES"" 
+	L51 = ""Drive A recharge"" 
+	L52 = ""Drive B recharge"" 
+	L53 = ""Choose Jump Gate destination"" 
+	L531 = ""Destination 1"" 
+	L532 = ""Destination 2"" 
+	L533 = ""Destination 3"" 
+	L6 = ""LIGHTS"" 
+	L61 = ""Spotlights"" 
+	L62 = ""Avionic lights"" 
+	L63 = ""Navigation lights"" 
+	L64 = ""Cockpit lights"" 
+	a1 = ""[ 1]"" 
+	a2 = ""[2]"" 
+	a3 = ""[3]"" 
+	a4 = ""[4]"" 
+	a5 = ""[5]"" 
+	a6 = ""[6]"" 
+	N = ""-"" 
+	P = ""  <<"" 
+} 
+ 
+@Draw{ 
+	if TriggerDelay of TiA < 10 
+	{ 
+		WriteNew to _l M = Heading 
+		WriteLine to _l M = ""\a1 \L1"" 
+		if TriggerDelay of TiA = 1  
+		{ 
+			Write to  _l M = P 
+		} 
+		WriteLine to _l M = ""\a2 \L2"" 
+		if TriggerDelay of TiA = 2 
+		{ 
+			Write to  _l M = P 
+		} 
+		WriteLine to _l M = ""\a3 \L3"" 
+		if TriggerDelay of TiA = 3 
+		{ 
+			Write to  _l M = P 
+		} 
+		WriteLine to _l M = ""\a4 \L4"" 
+		if TriggerDelay of TiA = 4 
+		{ 
+			Write to  _l M = P 
+		} 
+		WriteLine to _l M = ""\a5 \L5"" 
+		if TriggerDelay of TiA = 5 
+		{ 
+			Write to  _l M = P 
+		} 
+		WriteLine to _l M = ""\a6 \L6"" 
+		if TriggerDelay of TiA = 6 
+		{ 
+			Write to  _l M = P 
+		} 
+	} 
+	if TriggerDelay of TiA > 10 
+	{ 
+		if TriggerDelay of TiA < 20 
+		{ 
+			WriteNew to _l M = ""\Heading 
+			\N \L1 
+			"" 
+			WriteLine to _l M = ""\a1 \L11"" 
+			if TriggerDelay of TiA = 11 
+			{ 
+				Write to  _l M = P 
+			} 
+			WriteLine to _l M = ""\a2 \L12"" 
+			if TriggerDelay of TiA = 12 
+			{ 
+				Write to  _l M = P 
+			} 
+			WriteLine to _l M = ""\a3 \L13"" 
+			if TriggerDelay of TiA = 13 
+			{ 
+				Write to  _l M = P 
+			} 
+			WriteLine to _l M = ""\a4 \L14"" 
+			if TriggerDelay of TiA = 14 
+			{ 
+				Write to  _l M = P 
+			} 
+		} 
+	} 
+	if TriggerDelay of TiA > 20 
+	{ 
+		if TriggerDelay of TiA < 30 
+		{ 
+			WriteNew to _l M = ""\Heading 
+			\N \L2 
+			"" 
+			WriteLine to _l M = ""\a1 \L21"" 
+			if TriggerDelay of TiA = 21 
+			{ 
+				Write to  _l M = P 
+			} 
+			WriteLine to _l M = ""\a2 \L22"" 
+			if TriggerDelay of TiA = 22 
+			{ 
+				Write to  _l M = P 
+			} 
+			WriteLine to _l M = ""\a3 \L23"" 
+			if TriggerDelay of TiA = 23 
+			{ 
+				Write to  _l M = P 
+			} 
+		} 
+	} 
+	if TriggerDelay of TiA > 30 
+	{ 
+		if TriggerDelay of TiA < 40 
+		{ 
+			WriteNew to _l M = ""\Heading 
+			\N \L3 
+			"" 
+			WriteLine to _l M = ""\a1 \L31"" 
+			if TriggerDelay of TiA = 31 
+			{ 
+				Write to  _l M = P 
+			} 
+			WriteLine to _l M = ""\a2 \L32"" 
+			if TriggerDelay of TiA = 32 
+			{ 
+				Write to  _l M = P 
+			} 
+			WriteLine to _l M = ""\a3 \L33"" 
+			if TriggerDelay of TiA = 33 
+			{ 
+				Write to  _l M = P 
+			} 
+			WriteLine to _l M = ""\a4 \L34"" 
+			if TriggerDelay of TiA = 34 
+			{ 
+				Write to  _l M = P 
+			} 
+		} 
+	} 
+	if TriggerDelay of TiA > 40 
+	{ 
+		if TriggerDelay of TiA < 50 
+		{ 
+			WriteNew to _l M = ""\Heading 
+			\N \L4 
+			"" 
+			WriteLine to _l M = ""\a1 \L41"" 
+			if TriggerDelay of TiA = 41 
+			{ 
+				Write to  _l M = P 
+			} 
+			WriteLine to _l M = ""\a2 \L42"" 
+			if TriggerDelay of TiA = 42 
+			{ 
+				Write to  _l M = P 
+			} 
+			WriteLine to _l M = ""\a3 \L43"" 
+			if TriggerDelay of TiA = 43 
+			{ 
+				Write to  _l M = P 
+			} 
+			WriteLine to _l M = ""\a4 \L44"" 
+			if TriggerDelay of TiA = 44 
+			{ 
+				Write to  _l M = P 
+			} 
+		} 
+	} 
+	if TriggerDelay of TiA > 50 
+	{ 
+		if TriggerDelay of TiA < 60 
+		{ 
+			WriteNew to _l M = ""\Heading 
+			\N \L5 
+			"" 
+			WriteLine to _l M = ""\a1 \L51"" 
+			if TriggerDelay of TiA = 51 
+			{ 
+				Write to  _l M = P 
+			} 
+			WriteLine to _l M = ""\a2 \L52"" 
+			if TriggerDelay of TiA = 52 
+			{ 
+				Write to  _l M = P 
+			} 
+			WriteLine to _l M = ""\a3 \L53"" 
+			if TriggerDelay of TiA = 53 
+			{ 
+				Write to  _l M = P 
+			} 
+		} 
+	} 
+	if TriggerDelay of TiA > 60 
+	{ 
+		if TriggerDelay of TiA < 70 
+			{ 
+			WriteNew to _l M = ""\Heading 
+			\N \L6 
+			"" 
+			WriteLine to _l M = ""\a1 \L61"" 
+			if TriggerDelay of TiA = 61 
+			{ 
+				Write to  _l M = P 
+			} 
+			WriteLine to _l M = ""\a2 \L62"" 
+			if TriggerDelay of TiA = 62 
+			{ 
+				Write to  _l M = P 
+			} 
+			WriteLine to _l M = ""\a3 \L63"" 
+			if TriggerDelay of TiA = 63 
+			{ 
+				Write to  _l M = P 
+			} 
+			WriteLine to _l M = ""\a4 \L64"" 
+			if TriggerDelay of TiA = 64 
+			{ 
+				Write to  _l M = P 
+			} 
+		} 
+	} 
+	if TriggerDelay of TiA > 530 
+	{ 
+		if TriggerDelay of TiA < 540 
+		{ 
+		WriteNew to _l M = ""\Heading 
+		\N \L5 
+		\N \N \L53 
+			"" 
+		WriteLine to _l M = ""\a1 \L531"" 
+		if TriggerDelay of TiA = 531 
+		{ 
+			Write to  _l M = P 
+		} 
+		WriteLine to _l M = ""\a2 \L532"" 
+		if TriggerDelay of TiA = 532 
+		{ 
+			Write to  _l M = P 
+		} 
+		WriteLine to _l M = ""\a3 \L533"" 
+		if TriggerDelay of TiA = 533 
+		{ 
+			Write to  _l M = P 
+		} 
+		} 
+	} 
+} 
+", false, "[Mock_MK6] LCD_l horizon"); 
+ 
+WriteText(@" 
+@Up{ 
+	if TriggerDelay of TiA = 2 
+	{ 
+		TriggerDelay of TiA = 1 
+	} 
+	Else if TriggerDelay of TiA = 3 
+	{ 
+		TriggerDelay of TiA = 2 
+	} 
+	Else if TriggerDelay of TiA = 4 
+	{ 
+		TriggerDelay of TiA = 3 
+	} 
+	Else if TriggerDelay of TiA = 5 
+	{ 
+		TriggerDelay of TiA = 4 
+	} 
+	Else if TriggerDelay of TiA = 6 
+	{ 
+		TriggerDelay of TiA = 5 
+	} 
+	Else if TriggerDelay of TiA = 12 
+	{ 
+		TriggerDelay of TiA = 11 
+	} 
+	Else if TriggerDelay of TiA = 13 
+	{ 
+		TriggerDelay of TiA = 12 
+	} 
+	Else if TriggerDelay of TiA = 14 
+	{ 
+		TriggerDelay of TiA = 13 
+	} 
+	Else if TriggerDelay of TiA = 22 
+	{ 
+		TriggerDelay of TiA = 21 
+	} 
+	Else if TriggerDelay of TiA = 23 
+	{ 
+		TriggerDelay of TiA = 22 
+	} 
+	Else if TriggerDelay of TiA = 32 
+	{ 
+		TriggerDelay of TiA = 31 
+	} 
+	Else if TriggerDelay of TiA = 33 
+	{ 
+		TriggerDelay of TiA = 32 
+	} 
+	Else if TriggerDelay of TiA = 34 
+	{ 
+		TriggerDelay of TiA = 33 
+	} 
+	Else if TriggerDelay of TiA = 42 
+	{ 
+		TriggerDelay of TiA = 41 
+	} 
+	Else if TriggerDelay of TiA = 43 
+	{ 
+		TriggerDelay of TiA = 42 
+	} 
+	Else if TriggerDelay of TiA = 44 
+	{ 
+		TriggerDelay of TiA = 43 
+	} 
+	Else if TriggerDelay of TiA = 52 
+	{ 
+		TriggerDelay of TiA = 51 
+	} 
+	Else if TriggerDelay of TiA = 53 
+	{ 
+		TriggerDelay of TiA = 52 
+	} 
+	Else if TriggerDelay of TiA = 62 
+	{ 
+		TriggerDelay of TiA = 61 
+	} 
+	Else if TriggerDelay of TiA = 63 
+	{ 
+		TriggerDelay of TiA = 62 
+	} 
+	Else if TriggerDelay of TiA = 64 
+	{ 
+		TriggerDelay of TiA = 63 
+	} 
+	Else if TriggerDelay of TiA = 532 
+	{ 
+		TriggerDelay of TiA = 531 
+	} 
+	Else if TriggerDelay of TiA = 533 
+	{ 
+		TriggerDelay of TiA = 532 
+	} 
+	@[Mock_MK6] LCD_l horizon(Draw) 
+} 
+ 
+@Down{ 
+	if TriggerDelay of TiA = 1 
+	{ 
+		TriggerDelay of TiA = 2 
+	} 
+	Else if TriggerDelay of TiA = 2 
+	{ 
+		TriggerDelay of TiA = 3 
+	} 
+	Else if TriggerDelay of TiA = 3 
+	{ 
+		TriggerDelay of TiA = 4 
+	} 
+	Else if TriggerDelay of TiA = 4 
+	{ 
+		TriggerDelay of TiA = 5 
+	} 
+	Else if TriggerDelay of TiA = 5 
+	{ 
+		TriggerDelay of TiA = 6 
+	} 
+	Else if TriggerDelay of TiA = 11 
+	{ 
+		TriggerDelay of TiA = 12 
+	} 
+	Else if TriggerDelay of TiA = 12 
+	{ 
+		TriggerDelay of TiA = 13 
+	} 
+	Else if TriggerDelay of TiA = 13 
+	{ 
+		TriggerDelay of TiA = 14 
+	} 
+	Else if TriggerDelay of TiA = 21 
+	{ 
+		TriggerDelay of TiA = 22 
+	} 
+	Else if TriggerDelay of TiA = 22 
+	{ 
+		TriggerDelay of TiA = 23 
+	} 
+	Else if TriggerDelay of TiA = 31 
+	{ 
+		TriggerDelay of TiA = 32 
+	} 
+	Else if TriggerDelay of TiA = 32 
+	{ 
+		TriggerDelay of TiA = 33 
+	} 
+	Else if TriggerDelay of TiA = 33 
+	{ 
+		TriggerDelay of TiA = 34 
+	} 
+	Else if TriggerDelay of TiA = 41 
+	{ 
+		TriggerDelay of TiA = 42 
+	} 
+	Else if TriggerDelay of TiA = 42 
+	{ 
+		TriggerDelay of TiA = 43 
+	} 
+	Else if TriggerDelay of TiA = 43 
+	{ 
+		TriggerDelay of TiA = 44 
+	} 
+	Else if TriggerDelay of TiA = 51 
+	{ 
+		TriggerDelay of TiA = 52 
+	} 
+	Else if TriggerDelay of TiA = 52 
+	{ 
+		TriggerDelay of TiA = 53 
+	} 
+	Else if TriggerDelay of TiA = 61 
+	{ 
+		TriggerDelay of TiA = 62 
+	} 
+	Else if TriggerDelay of TiA = 62 
+	{ 
+		TriggerDelay of TiA = 63 
+	} 
+	Else if TriggerDelay of TiA = 63 
+	{ 
+		TriggerDelay of TiA = 64 
+	} 
+	Else if TriggerDelay of TiA = 531 
+	{ 
+		TriggerDelay of TiA = 532 
+	} 
+	Else if TriggerDelay of TiA = 532 
+	{ 
+		TriggerDelay of TiA = 533 
+	} 
+	@[Mock_MK6] LCD_l horizon(Draw) 
+} 
+ 
+@Select{ 
+	if TriggerDelay of TiA = 1 
+	{ 
+		TriggerDelay of TiA = 11 
+	} 
+	Else if TriggerDelay of TiA = 2 
+	{ 
+		TriggerDelay of TiA = 21 
+	} 
+	Else if TriggerDelay of TiA = 3 
+	{ 
+		TriggerDelay of TiA = 31 
+	} 
+	Else if TriggerDelay of TiA = 4 
+	{ 
+		TriggerDelay of TiA = 41 
+	} 
+	Else if TriggerDelay of TiA = 5 
+	{ 
+		TriggerDelay of TiA = 51 
+	} 
+	Else if TriggerDelay of TiA = 6 
+	{ 
+		TriggerDelay of TiA = 61 
+	} 
+	Else if TriggerDelay of TiA = 53 
+	{ 
+		TriggerDelay of TiA = 531 
+	} 
+	Else if TriggerDelay of TiA = 11 
+	{ 
+		@[Mock_MK6_LCD] LCD_l #POWER STATUS(Gear) 
+	} 
+	Else if TriggerDelay of TiA = 12 
+	{ 
+		@[Mock_MK6_LCD] LCD_l #POWER STATUS(SwL) 
+	} 
+	Else if TriggerDelay of TiA = 13 
+	{ 
+		@[Mock_MK6_LCD] LCD_l #POWER STATUS(Magn) 
+	} 
+	Else if TriggerDelay of TiA = 14 
+	{ 
+		@[Mock_MK6_LCD] LCD_l #POWER STATUS(MagnLock) 
+	} 
+	Else if TriggerDelay of TiA = 21 
+	{ 
+		@[Mock_MK6_LCD] LCD_l #POWER STATUS(Weapons) 
+	} 
+	Else if TriggerDelay of TiA = 22 
+	{ 
+		@[Mock_MK6_LCD] LCD_l #POWER STATUS(Turret) 
+	} 
+	Else if TriggerDelay of TiA = 31 
+	{ 
+		@[Mock_MK6_LCD] LCD_l #POWER STATUS(ConTP) 
+	} 
+	Else if TriggerDelay of TiA = 32 
+	{ 
+		@[Mock_MK6_LCD] LCD_l #POWER STATUS(ConTPLock) 
+	} 
+	Else if TriggerDelay of TiA = 33 
+	{ 
+		@[Mock_MK6_LCD] LCD_l #POWER STATUS(ConBT) 
+	} 
+	Else if TriggerDelay of TiA = 34 
+	{ 
+		@[Mock_MK6_LCD] LCD_l #POWER STATUS(ConBTLock) 
+	} 
+	Else if TriggerDelay of TiA = 41 
+	{ 
+		@[Mock_MK6_LCD] LCD_l #POWER STATUS(TA) 
+	} 
+	Else if TriggerDelay of TiA = 42 
+	{ 
+		@[Mock_MK6_LCD] LCD_l #POWER STATUS(TH) 
+	} 
+	Else if TriggerDelay of TiA = 43 
+	{ 
+		@[Mock_MK6_LCD] LCD_l #POWER STATUS(TI) 
+	} 
+	Else if TriggerDelay of TiA = 44 
+	{ 
+		@[Mock_MK6_LCD] LCD_l #POWER STATUS(TAA) 
+	} 
+	Else if TriggerDelay of TiA = 51 
+	{ 
+		@[Mock_MK6_LCD] LCD_l #POWER STATUS(DAR) 
+	} 
+	Else if TriggerDelay of TiA = 52 
+	{ 
+		@[Mock_MK6_LCD] LCD_l #POWER STATUS(DBR) 
+	} 
+	Else if TriggerDelay of TiA = 61 
+	{ 
+		@[Mock_MK6_LCD] LCD_l #POWER STATUS(SP) 
+	} 
+	Else if TriggerDelay of TiA = 62 
+	{ 
+		@[Mock_MK6_LCD] LCD_l #POWER STATUS(LA) 
+	} 
+	Else if TriggerDelay of TiA = 63 
+	{ 
+		@[Mock_MK6_LCD] LCD_l #POWER STATUS(LH) 
+	} 
+	Else if TriggerDelay of TiA = 64 
+	{ 
+		@[Mock_MK6_LCD] LCD_l #POWER STATUS(LC) 
+	} 
+	@[Mock_MK6] LCD_l horizon(Draw) 
+} 
+ 
+@Select2{ 
+	if TriggerDelay of TiA < 7 
+	{ 
+		TriggerDelay of TiA = 1 *1 
+	} 
+	Else if TriggerDelay of TiA < 15 
+	{ 
+		if TriggerDelay of TiA > 10 
+		{ 
+			TriggerDelay of TiA = 11 *2 
+		} 
+	} 
+	Else if TriggerDelay of TiA < 24 
+	{ 
+		if TriggerDelay of TiA > 20 
+		{ 
+			TriggerDelay of TiA = 21 *3 
+		} 
+	} 
+	Else if TriggerDelay of TiA < 35 
+	{ 
+		if TriggerDelay of TiA > 30 
+		{ 
+			TriggerDelay of TiA = 31 *4 
+		} 
+	} 
+	Else if TriggerDelay of TiA < 45 
+	{ 
+		if TriggerDelay of TiA > 40 
+		{ 
+			TriggerDelay of TiA = 41 *5 
+		} 
+	} 
+	Else if TriggerDelay of TiA < 54 
+	{ 
+		if TriggerDelay of TiA > 50 
+		{ 
+			TriggerDelay of TiA = 51 *6 
+		} 
+	} 
+	Else if TriggerDelay of TiA < 65 
+	{ 
+		if TriggerDelay of TiA > 60 
+		{ 
+			TriggerDelay of TiA = 61 *7 
+		} 
+	} 
+	Else if TriggerDelay of TiA < 534 
+	{ 
+		if TriggerDelay of TiA > 530 
+		{ 
+			TriggerDelay of TiA = 531 *8 
+		} 
+	} 
+	@[Mock_MK6] LCD_l horizon(Draw) 
+	Delay 1000 
+	@Select 
+} 
+ 
+@Back{ 
+	if TriggerDelay of TiA < 10 
+	{ 
+		TriggerDelay of TiA = 1 
+	} 
+	if TriggerDelay of TiA > 10 
+	{ 
+	if TriggerDelay of TiA < 20 
+	{ 
+		TriggerDelay of TiA = 1 
+	} 
+	} 
+	if TriggerDelay of TiA > 20 
+	{ 
+	if TriggerDelay of TiA < 30 
+	{ 
+		TriggerDelay of TiA = 2 
+	} 
+	} 
+	if TriggerDelay of TiA > 30 
+	{ 
+	if TriggerDelay of TiA < 40 
+	{ 
+		TriggerDelay of TiA = 3 
+	} 
+	} 
+	if TriggerDelay of TiA > 40 
+	{ 
+	if TriggerDelay of TiA < 50 
+	{ 
+		TriggerDelay of TiA = 4 
+	} 
+	} 
+	if TriggerDelay of TiA > 50 
+	{ 
+	if TriggerDelay of TiA < 60 
+	{ 
+		TriggerDelay of TiA = 5 
+	} 
+	} 
+	if TriggerDelay of TiA > 60 
+	{ 
+	if TriggerDelay of TiA < 70 
+	{ 
+		TriggerDelay of TiA = 6 
+	} 
+	} 
+	if TriggerDelay of TiA > 530 
+	{ 
+	if TriggerDelay of TiA < 540 
+	{ 
+		TriggerDelay of TiA = 53 
+	} 
+	} 
+	@[Mock_MK6] LCD_l horizon(Draw) 
+} 
+", false, "[Mock_MK6] LCD_l Menu"); 
+ 
+WriteText(@" 
+@Variables{ 
+	Name = Riverey 
+} 
+@Weapons{ 
+	if OnOff of Autocannon = false 
+	{ 
+		Open of (Doors weapons) = On 
+		Delay 5000 
+		OnOff of Autocannon = true 
+		OnOff of Launcher = true 
+		OnOff of Light weapon = true 
+	} 
+	Else 
+	{ 
+		OnOff of Autocannon = false 
+		OnOff of Launcher = false 
+		OnOff of Light weapon = false 
+		Open of (Doors weapons) = Off 
+	} 
+} 
+@Turret{ 
+	if OnOff of Turret = false 
+	{ 
+		OnOff of Turret = true 
+	} 
+	Else 
+	{ 
+		OnOff of Turret = false 
+	} 
+} 
+@LH{ 
+	if Radius of (Lights hull) = 0.8 
+	{ 
+		OnOff of (Lights hull) = false 
+		Radius of (Lights hull) = 0.7 
+	} 
+	Else 
+	{ 
+		OnOff of (Lights hull) = true 
+		Radius of (Lights hull) = 0.8 
+	} 
+} 
+@LA{ 
+	if Radius of (Lights avionic) = 1.1 
+	{ 
+		OnOff of (Lights avionic) = false 
+		Radius of (Lights avionic) = 1.0 
+		Open of (Shutters avionic) = On 
+	} 
+	Else 
+	{ 
+		OnOff of (Lights avionic) = true 
+		Radius of (Lights avionic) = 1.1 
+		Open of (Shutters avionic) = Off 
+	} 
+} 
+@LC{ 
+	if Radius of (Lights cockpit) = 1.8 
+	{ 
+		OnOff of (Lights cockpit) = false 
+		Radius of (Lights cockpit) = 1.0 
+	} 
+	Else 
+	{ 
+		OnOff of (Lights cockpit) = true 
+		Radius of (Lights cockpit) = 1.8 
+	} 
+} 
+@SP{ 
+	if OnOff of (Spotlights) = true 
+	{ 
+		OnOff of (Spotlights) = false 
+	} 
+	Else 
+	{ 
+		OnOff of (Spotlights) = true 
+	} 
+} 
+@TI{ 
+	if Override of (Thrusters ion) = 2 
+	{ 
+		Override of (Thrusters ion) = 0 
+		OnOff of (Thrusters ion) = true 
+	} 
+	Else 
+	{ 
+		OnOff of (Thrusters ion) = false 
+		Override of (Thrusters ion) = 2 
+	} 
+} 
+@TH{ 
+	if Override of (Thrusters hydrogen) = 2 
+	{ 
+		Override of (Thrusters hydrogen) = 0 
+		OnOff of (Thrusters hydrogen) = true 
+	} 
+	Else 
+	{ 
+		OnOff of (Thrusters hydrogen) = false 
+		Override of (Thrusters hydrogen) = 2 
+	} 
+} 
+@TA{ 
+	if OnOff of (Thrusters atmospheric) = true 
+	{ 
+		OnOff of (Thrusters atmospheric) = false 
+	} 
+	Else 
+	{ 
+		OnOff of (Thrusters atmospheric) = true 
+	} 
+} 
+@TAA{ 
+	if OnOff of (Thrusters afterburner) = true 
+	{ 
+		OnOff of (Thrusters afterburner) = false 
+	} 
+	Else 
+	{ 
+		OnOff of (Thrusters afterburner) = true 
+	} 
+} 
+@Gear{ 
+	if Open of (Doors gear) = Off 
+	{ 
+		Open of (Doors gear) = On 
+		Delay 2000 
+		Force weld Landing Gear 
+		Delay 500 
+		Extend (Pistons gear) 
+		Delay 3000 
+		Force weld Landing Gear 
+	} 
+	Else  
+	{ 
+		Force weld Landing Gear 
+		Delay 500 
+		Retract (Pistons gear) 
+		Delay 2000 
+		Force weld Landing Gear 
+		Open of (Doors gear) = Off 
+	} 
+} 
+@SwL{ 
+	if Current position of Landing Gear = 0.5 
+	{ 
+		SwitchLock (Gear Lock) 
+	} 
+} 
+@Magn{ 
+	if OnOff of (Magnets) = false 
+	{ 
+		OnOff of (Magnets) = true 
+		Autolock of (Magnets) = true 
+	} 
+	Else 
+	{ 
+		OnOff of (Magnets) = false 
+	} 
+} 
+@MagnLock{ 
+	Unlock (Magnets) 
+} 
+@DAR{ 
+	Recharge Jump Drive A  
+} 
+@DBR{ 
+	Recharge Jump Drive B  
+} 
+@ConTP{ 
+	if Current position of Piston (top) = 1 
+	{ 
+		Unlock [Mock_MK6_con] Connector (top) - 
+		Retract Piston (top) 
+		Delay 3000 
+		Force weld Piston (top) 
+		OnOff of [Mock_MK6_con] Connector (top) - = false 
+		Open of Door Con top = Off 
+	} 
+	Else 
+	{ 
+		Open of Door Con top = On 
+		Delay 2000 
+		Force weld Piston (top) 
+		Extend Piston (top) 
+		Delay 3000 
+		OnOff of [Mock_MK6_con] Connector (top) - = true 
+	} 
+} 
+@ConBT{ 
+	if Current position of Piston (bottom) = 1 
+	{ 
+		Unlock [Mock_MK6_con2] Connector (bottom) - 
+		Retract Piston (bottom) 
+		Delay 3000 
+		Force weld Piston (bottom) 
+		OnOff of [Mock_MK6_con2] Connector (bottom) - = false 
+		Open of Door Con bottom = Off 
+	} 
+	Else 
+	{ 
+		Open of Door Con bottom = On 
+		Delay 2000 
+		Force weld Piston (bottom) 
+		Extend Piston (bottom) 
+		Delay 3000 
+		OnOff of [Mock_MK6_con2] Connector (bottom) - = true 
+	} 
+} 
+@ConTPLock{ 
+	if Current position of Piston (top) > 0.5 
+		{ 
+			[Mock_MK6_con] SwitchLock Connector (top) - 
+		} 
+} 
+@ConBTLock{ 
+	if Current position of Piston (bottom) > 0.5 
+		{ 
+			SwitchLock [Mock_MK6_con2] Connector (bottom) - 
+		} 
+} 
+@Prox{ 
+	if ShowOnHud of (Sensors proximity) = true 
+	{ 
+		OnOff of (Sensors proximity) = false 
+		ShowOnHud of (Sensors proximity) = true 
+	} 
+	Else 
+	{ 
+		ShowOnHud of (Sensors proximity) = false 
+		OnOff of (Sensors proximity) = true 
+	} 
+} 
+@Cockpit{ 
+	if Open of Canopy = true 
+	{ 
+		Close Canopy 
+		PlaySound Soundblock Canopy Close 
+	} 
+	Else 
+	{ 
+		Open Canopy 
+		PlaySound Soundblock Canopy Open 
+	} 
+} 
+@OnOff{ 
+	if OnOff of LCD_l horizon = false 
+	{ 
+		@Bootup 
+	} 
+	Else 
+	{ 
+		@Shutdown 
+	} 
+	} 
+	 
+@Bootup{ 
+	OnOff of (LCD Cockpit) = true 
+	WriteNew to LCD small = "" 
+ 
+ 
+ 
+ 
+ 
+				 HELLO, \Name "" 
+	PlaySound Soundblock BootOS 
+	Image of LCD_l = Bootup1 
+	Delay 800 
+	Image of LCD_l = Bootup2 
+	Delay 800 
+	Image of LCD_l = Bootup3 
+	Delay 800 
+	Image of LCD_l = Bootup4 
+	Delay 800 
+	Image of LCD_l = Bootup5 
+	Delay 800 
+	Image of LCD_l = Bootup6 
+	Delay 800 
+	Image of LCD_l = Bootup7 
+	Delay 800  
+	Image of LCD_l = Bootup8  
+	Delay 800 
+	Image of LCD_l = Bootup9  
+	Delay 800  
+	Image of LCD_l = Bootup10 
+	Delay 800 
+	Image of LCD_l = Bootup11 
+	Delay 2000 
+	PlaySound Soundblock Bootup 
+	Image of LCD_l = Intro1 
+	Delay 100 
+	Image of LCD_l = Intro2 
+	Delay 100 
+	Image of LCD_l = Intro3 
+	Delay 100 
+	Image of LCD_l = Intro4 
+	Delay 100 
+	Image of LCD_l = Intro5 
+	Delay 100 
+	Image of LCD_l = Intro6 
+	Delay 100 
+	Image of LCD_l = Intro7 
+	Delay 100  
+	Image of LCD_l = Intro8  
+	Delay 100 
+	Image of LCD_l = Intro9  
+	Delay 100  
+	Image of LCD_l = Intro10 
+	Delay 100 
+	Image of LCD_l = Intro11 
+	Delay 100 
+	Image of LCD_l = Intro12 
+	Delay 100 
+	Image of LCD_l = Intro13 
+	Delay 100 
+	Image of LCD_l = Intro14  
+	Delay 100 
+	Image of LCD_l = Intro15 
+	Delay 100 
+	Image of LCD_l = Intro16 
+	Delay 100 
+	Image of LCD_l = Intro17 
+	Delay 100  
+	Image of LCD_l = Intro18 
+	Delay 100 
+	Image of LCD_l = Intro19 
+	Delay 100  
+	Image of LCD_l = Intro20 
+	Delay 100 
+	Image of LCD_l = Intro21 
+	Delay 100 
+	Image of LCD_l = Intro22 
+	Delay 100 
+	Image of LCD_l = Intro23 
+	Delay 100 
+	Image of LCD_l = Intro24  
+	Delay 100 
+	Image of LCD_l = Intro25 
+	Delay 100 
+	Image of LCD_l = Intro26 
+	Delay 100 
+	Image of LCD_l = Intro27 
+	Delay 100  
+	Image of LCD_l = Intro28 
+	Delay 100 
+	Image of LCD_l = Intro29 
+	Delay 2000 
+	OnOff of (Prog blocks Cockpit) = true 
+	WriteNew to [Mock_MK6] LCD_l Ship plan = ""Ship status"" 
+	@[Mock_MK6] LCD_l horizon(Draw) 
+	OnOff of Projector preview = true 
+	if Override of (Thrusters ion) = 0 
+	{ 
+		OnOff of (Thrusters ion) = true 
+	} 
+	if Override of (Thrusters atmospheric) = 0 
+	{ 
+		OnOff of (Thrusters atmospheric) = true 
+	} 
+	if Override of (Thrusters hydrogen) = 0 
+	{ 
+		OnOff of (Thrusters hydrogen) = true 
+	} 
+	if Override of (Thrusters afterburner) = 0 
+	{ 
+		OnOff of (Thrusters afterburner) = true 
+	} 
+	OnOff of (Gyroscopes) = true 
+	if Radius of (Lights hull) = 0.8  
+	{ 
+		OnOff of (Lights hull) = true 
+	} 
+	if Radius of (Lights avionic) = 1.1  
+	{ 
+		OnOff of (Lights avionic) = true 
+		Open of (Shutters avionic) = Off 
+	} 
+	if Radius of (Lights cockpit) = 1.8  
+	{ 
+		OnOff of (Lights cockpit) = true 
+	} 
+	OnOff of (Oxygen Generators) = true 
+} 
+ 
+@Shutdown{ 
+	OnOff of (Lights cockpit) = false 
+	OnOff of (Lights avionic) = false 
+	OnOff of (Lights hull) = false 
+	OnOff of (Spotlights) = false 
+	OnOff of (LCD Cockpit) = false 
+	Open of (Shutters avionic) = On 
+	OnOff of (Gyroscopes) = false 
+	OnOff of Projector preview = false 
+	Delay 1000 
+	OnOff of (Thrusters hydrogen) = false 
+	Delay 1000 
+	OnOff of (Thrusters atmospheric) = false 
+	Delay 1000 
+	OnOff of (Thrusters ion) = false 
+	OnOff of (Thrusters afterburner) = false 
+	Delay 1000 
+	OnOff of (Prog blocks Cockpit) = false 
+	OnOff of (Oxygen Generators) = false 
+} 
+", false, "[Mock_MK6_LCD] LCD_l #POWER STATUS"); 
+}   
+  
+  
+void WriteText(string textchoice, bool tf, string txtname)   
+{   
+	IMyTextPanel txt = GridTerminalSystem.GetBlockWithName(txtname) as IMyTextPanel;  
+	txt.WritePrivateText(textchoice + "\n", tf);  
+}  
