@@ -524,7 +524,131 @@ WriteText(@"
 	}	 
 } 
 ", false, "[Mock_MK6] LCD_l horizon"); 
- 
+
+WriteText(@"
+@Variables{
+	LS0 = ""                        ""
+	LS1 = ""[X]""
+	LS2 = ""[O]""
+	LI = ""
+	
+	----------------------
+	[X] - obstacle detected   [O] - nothing to detect""
+}
+
+@LDraw{
+	Write to LCD = LS0
+	if ShowInToolbarConfig of Sensor (right) = true
+	{
+		Write to LCD = LS1
+	}
+	Else
+	{
+		Write to LCD = LS2
+	}
+	WriteLine to LCD = ""\LS0 |""
+	WriteLine to LCD = ""\LS0 |""
+	WriteLine to LCD = ""\LS0 |""
+	if ShowInToolbarConfig of Sensor (front) = true
+	{
+		WriteLine to LCD = ""   \LS1""
+	}
+	Else
+	{
+		WriteLine to LCD = ""   \LS2""
+	}
+	Write to LCD = ""-------------------------------------""
+	if ShowInToolbarConfig of Sensor (back) = true
+	{
+		Write to LCD = LS1
+	}
+	Else
+	{
+		Write to LCD = LS2
+	}
+	WriteLine to LCD = ""\LS0 |""
+	WriteLine to LCD = ""\LS0 |""
+	WriteLine to LCD = ""\LS0 |""
+	if ShowInToolbarConfig of Sensor (left) = true
+	{
+		Write to LCD = LS1
+	}
+	Else
+	{
+		Write to LCD = LS2
+	}
+	WriteLine to LCD = LI
+	if ShowInToolbarConfig of Sensor (right) = true
+	{
+		FontColor of LCD = 255:120:0
+	}
+	Else if ShowInToolbarConfig of Sensor (right) = true
+	{
+		FontColor of LCD = 255:120:0
+	}
+	Else if ShowInToolbarConfig of Sensor (right) = true
+	{
+		FontColor of LCD = 255:120:0
+	}
+	Else if ShowInToolbarConfig of Sensor (right) = true
+	{
+		FontColor of LCD = 255:120:0
+	}
+	Else
+	{
+		FontColor of LCD = 255:255:255
+	}
+}
+
+@SR{
+	if ShowInToolbarConfig of Sensor (right) = true
+	{
+		ShowInToolbarConfig of Sensor (right) = false
+	}
+	Else
+	{
+		ShowInToolbarConfig of Sensor (right) = true
+	}
+	@[Mock_MK6] LCD_l #AMMO STATUS(LDraw)
+}
+
+@SL{
+	if ShowInToolbarConfig of Sensor (left) = true
+	{
+		ShowInToolbarConfig of Sensor (left) = false
+	}
+	Else
+	{
+		ShowInToolbarConfig of Sensor (left) = true
+	}
+	@[Mock_MK6] LCD_l #AMMO STATUS(LDraw)
+}
+
+@SF{
+	if ShowInToolbarConfig of Sensor (front) = true
+	{
+		ShowInToolbarConfig of Sensor (front) = false
+	}
+	Else
+	{
+		ShowInToolbarConfig of Sensor (front) = true
+	}
+	@[Mock_MK6] LCD_l #AMMO STATUS(LDraw)
+}
+
+@SB{
+	if ShowInToolbarConfig of Sensor (back) = true
+	{
+		ShowInToolbarConfig of Sensor (back) = false
+	}
+	Else
+	{
+		ShowInToolbarConfig of Sensor (back) = true
+	}
+	@[Mock_MK6] LCD_l #AMMO STATUS(LDraw)
+}
+", false, "@[Mock_MK6_LCD] LCD_l #AMMO STATUS");
+
 WriteText(@" 
 @Up{ 
 	if TriggerDelay of TiA = 2 
@@ -1183,6 +1307,9 @@ WriteText(@"
 		Extend (Pistons gear) 
 		Delay 3000 
 		Force weld Landing Gear
+		OnOff of (Sensors proximity) = On
+		Rename [Mock_MK6_LCD] LCD_l #AMMO STATUS = ""[Mock_MK6] LCD_l #AMMO STATUS""
+		@[Mock_MK6] LCD_l #AMMO STATUS(LDraw)
 	} 
 	Else  
 	{ 
@@ -1192,6 +1319,8 @@ WriteText(@"
 		Delay 2000 
 		Force weld Landing Gear 
 		Open of (Doors gear) = Off
+		OnOff of (Sensors proximity) = On
+		Rename [Mock_MK6] LCD_l #AMMO STATUS = ""[Mock_MK6_LCD] LCD_l #AMMO STATUS""
 	}
 	@[Mock_MK6] LCD_l horizon(Draw)
 } 
@@ -1368,6 +1497,14 @@ WriteText(@"
 	}
 	@[Mock_MK6] LCD_l horizon(Draw)
 }
+@ABRT{
+	Open_On Chute
+	PlaySound Soundblock (Abort alarm)
+	OnOff of (Lights hull) = true
+	Color of (Lights hull) = 255:47:0
+	Image of (LCD cockpit) = Abort 2
+}
+
 @OnOff{ 
 	if OnOff of LCD_l horizon = false 
 	{ 
